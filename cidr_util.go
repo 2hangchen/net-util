@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+//Returns an array of available IPs
 func CidrIpRange(ipWithMask string) (ips []string, err error) {
 	ip, ipnet, err := net.ParseCIDR(ipWithMask)
 	if err != nil {
